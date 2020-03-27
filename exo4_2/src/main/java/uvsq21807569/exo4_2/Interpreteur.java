@@ -14,12 +14,26 @@ public class Interpreteur {
 		this.historique = new Stack<Annulable_comd>();
 		this.s = new  RecepteurSwitch();
 	}
-	private void applyCommand(Command command) {
+	private void executerCommand(Command command) {
 
 		command.executer();
+		
+}	
+	public void enregistrercmd(Annulable_comd command) throws Exception {
 
-	}	
-	
+		try {
+
+			command.executer();
+
+			this.historique.add(command);	
+
+		} catch (Exception e) {
+
+			throw e;
+
+		}
+
+	}
 	
 
 }
