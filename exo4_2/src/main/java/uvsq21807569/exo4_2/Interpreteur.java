@@ -4,6 +4,8 @@ import java.util.Stack;
 
 import commandes.Annulable_comd;
 import commandes.Command;
+import commandes.QuitCommand;
+import commandes.UndoCommand;
 
 public class Interpreteur {
 	
@@ -14,7 +16,7 @@ public class Interpreteur {
 		this.historique = new Stack<Annulable_comd>();
 		this.s = new  RecepteurSwitch();
 	}
-	private void executerCommand(Command command) {
+	public void executerCommand(Command command) {
 
 		command.executer();
 		
@@ -35,5 +37,12 @@ public class Interpreteur {
 
 	}
 	
+	public void undocommand() {
+		this.executerCommand(new UndoCommand(historique));
+	}
 
+	public void quittercommand() {
+		this.executerCommand(new QuitCommand(s));
+	}
+	
 }
