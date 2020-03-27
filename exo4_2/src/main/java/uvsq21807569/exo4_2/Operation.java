@@ -43,10 +43,12 @@ public enum Operation {
 	
 	
 	public abstract double eval(double x , double y);
+
+
+	public String getoper() {
+		return sym;
 	}
-
-		
-
+}
 
 
 		
