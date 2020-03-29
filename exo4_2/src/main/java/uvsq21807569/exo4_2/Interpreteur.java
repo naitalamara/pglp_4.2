@@ -45,4 +45,9 @@ public class Interpreteur {
 		this.executerCommand(new QuitCommand(s));
 	}
 	
+	public boolean etats() {
+
+		return s.etat();
+
+	}
 }
