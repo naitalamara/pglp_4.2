@@ -31,7 +31,7 @@ public class SaisieRPN {
 
 			input = lecture();
 			saisi += input + " ";
-			System.out.println(saisi);
+			
 			}
 
 		catch (Exception e) {
