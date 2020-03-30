@@ -17,12 +17,12 @@ public class OperationCmd implements Annulable_comd {
 	
 	
 	public void executer() {
-		double resultat ;
+		int resultat ;
 		a=this.pile.pop();
 		b=this.pile.pop();
 		
 		resultat=operation.eval(a, b);
-		
+		this.pile.push(resultat);
 	}
 
 	public void undo() {

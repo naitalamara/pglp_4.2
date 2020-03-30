@@ -26,7 +26,7 @@ public class SaisieRPN {
 	String input = ""; 
 	String saisi ="";
 	while(moteur.etats()) {
-		System.out.println("Saisissez sois un entier,sois  une opération ou exit pour sortir, puis taper sur entrée");
+		System.out.println("Saisissez sois un entier,sois  une opération(+ - * / ) ,exit en minuscule  pour sortir,undo en minuscule  pour  annuler la saisie précédente  ,et  puis taper sur entrée");
 		try {
 
 			input = lecture();
@@ -53,7 +53,7 @@ public class SaisieRPN {
 
 		if (sc.hasNextInt()) {
 
-			Integer d = sc.nextInt();
+		Integer d = sc.nextInt();
 			moteur.enregistrernb(d);
 			sc.nextLine();
 			input = d.toString();

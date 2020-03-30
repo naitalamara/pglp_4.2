@@ -34,8 +34,8 @@ public class MoteurRPN extends Interpreteur {
 		public String afficherPile() {
 
 			String s = " ";
-
-			for (int d : this.pile) {
+			System.out.println("la pile contient :  ");
+			for (double d : this.pile) {
 
 				s += (d + " ");
 

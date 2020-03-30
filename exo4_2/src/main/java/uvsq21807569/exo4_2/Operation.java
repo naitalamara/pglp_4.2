@@ -5,21 +5,21 @@ public enum Operation {
 	PLUS("+"){
 
 		@Override
-		public double eval(double x, double y) {
-		return x+y;
+		public int eval(int x, int y) {
+		return  (x+y);
 		}
 		},
 	MOINS("-"){
 		@Override
 
-		public double eval(double x, double y) {
-		return x - y;
+		public int eval(int x, int y) {
+		return  (x - y);
 		}
 		},
 	MULT("*"){
 		@Override
-		public double eval(double x, double y) {
-			return x * y;
+		public int eval(int x, int y) {
+			return (x * y);
 
 			}
 },
@@ -28,9 +28,9 @@ public enum Operation {
 
 		@Override
 
-			public double eval(double x, double y) {
+			public int eval(int x, int y) {
 
-			return x / y;
+			return  (x / y);
 
 			}
 };
@@ -42,7 +42,7 @@ public enum Operation {
 	}
 	
 	
-	public abstract double eval(double x , double y);
+	public abstract int eval(int x , int y);
 
 
 	public String getoper() {
